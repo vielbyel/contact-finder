@@ -1,9 +1,9 @@
 const pg = require('pg')
 const pool = new pg.Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'contactsdb',
-  password: 'stratpoint',
+  user: 'guuvmnzgvwyuix',
+  host: 'ec2-184-72-238-22.compute-1.amazonaws.com',
+  database: 'd4d92m7epj49hm',
+  password: 'f9ce151523e0e5cf9e27480fcd2897be12e26a327266df4fcb730a809294257d',
   port: 5432,
 })
 
