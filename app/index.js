@@ -1,6 +1,8 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const db = require('./query')
+const host = '0.0.0.0';
+const port = process.env.PORT || 3000;
 
 const app = express()
 
@@ -21,6 +23,7 @@ app.post('/api/contacts', db.addContact)
 app.put('/api/contacts/:id', db.updateContact)
 app.delete('/api/contacts/:id', db.deleteContact)
 
-app.listen(3000)
-console.log('server listening to port 3000')
+app.listen(port, host, function() {
+  console.log("Server started...");
+});
 
