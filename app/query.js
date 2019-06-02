@@ -7,6 +7,12 @@ const pool = new pg.Pool({
   port: 5432,
 })
 
+pool.connect((err, client, release) => {
+  if (err) {
+    return console.error('Error acquiring client', err.stack)
+  }
+})
+
 const getContacts = (request, response) => {
   pool.query('SELECT * FROM contacts', (error, results) => {
     if(error) {
